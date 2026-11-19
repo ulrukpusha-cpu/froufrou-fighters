@@ -1,0 +1,12 @@
+# Cache et imports générés par Godot
+.godot/
+# Builds et exports
+build/
+/android/
+*.apk
+*.aab
+*.ipa
+# Divers
+*.tmp
+.DS_Store
+Thumbs.db

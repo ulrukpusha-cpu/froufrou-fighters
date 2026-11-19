@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_oy2eb"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_q1kb2"]
+
+[sub_resource type="Resource" id="Resource_7gg81"]
+script = ExtResource("1_oy2eb")
+rect = Rect2(10, -330, 170, 330)
+
+[resource]
+script = ExtResource("2_q1kb2")
+id = &"ultimate"
+display_name = "Colonne Magnan"
+category = 2
+animation = &"ultimate"
+startup_frames = 10
+active_frames = 30
+recovery_frames = 24
+damage = 55
+chip_damage = 10
+hitstun_frames = 20
+blockstun_frames = 16
+pushback = 10.0
+knockdown = true
+launch_velocity = Vector2(500, -900)
+max_hits = 5
+rehit_interval_frames = 6
+gauge_gain_on_hit = 0
+gauge_gain_on_block = 0
+gauge_cost = 300
+self_velocity = Vector2(700, 0)
+invulnerable_frames = 12
+hitboxes = Array[ExtResource("1_oy2eb")]([SubResource("Resource_7gg81")])

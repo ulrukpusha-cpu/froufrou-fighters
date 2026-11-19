@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_bef4d"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_60b1e"]
+
+[sub_resource type="Resource" id="Resource_pvejc"]
+script = ExtResource("1_bef4d")
+rect = Rect2(60, -320, 105, 60)
+
+[resource]
+script = ExtResource("2_60b1e")
+id = &"light"
+display_name = "Jab Rapide"
+recovery_frames = 7
+damage = 35
+hit_stop_frames = 5
+pushback = 45.0
+gauge_gain_on_hit = 6
+gauge_gain_on_block = 3
+cancel_condition = 2
+cancel_into = Array[StringName]([&"light", &"heavy", &"crouch_light", &"crouch_heavy", &"special", &"ultimate"])
+hitboxes = Array[ExtResource("1_bef4d")]([SubResource("Resource_pvejc")])

@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/fighters/fighter.gd" id="1_fighter"]
+[ext_resource type="Script" path="res://scripts/fighters/fighter_visual.gd" id="2_visual"]
+[ext_resource type="Script" path="res://scripts/combat/hurtbox.gd" id="3_hurtbox"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox.gd" id="4_hitbox"]
+
+[node name="Fighter" type="CharacterBody2D"]
+script = ExtResource("1_fighter")
+
+[node name="Pushbox" type="CollisionShape2D" parent="."]
+
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="Visual" type="Node2D" parent="Pivot"]
+script = ExtResource("2_visual")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Pivot/Visual"]
+
+[node name="Effects" type="AnimationPlayer" parent="Pivot/Visual"]
+
+[node name="Hurtbox" type="Area2D" parent="Pivot"]
+script = ExtResource("3_hurtbox")
+
+[node name="Shape" type="CollisionShape2D" parent="Pivot/Hurtbox"]
+
+[node name="Hitboxes" type="Node2D" parent="Pivot"]
+
+[node name="Hitbox0" type="Area2D" parent="Pivot/Hitboxes"]
+script = ExtResource("4_hitbox")
+
+[node name="Shape" type="CollisionShape2D" parent="Pivot/Hitboxes/Hitbox0"]
+
+[node name="Hitbox1" type="Area2D" parent="Pivot/Hitboxes"]
+script = ExtResource("4_hitbox")
+
+[node name="Shape" type="CollisionShape2D" parent="Pivot/Hitboxes/Hitbox1"]
+
+[node name="Hitbox2" type="Area2D" parent="Pivot/Hitboxes"]
+script = ExtResource("4_hitbox")
+
+[node name="Shape" type="CollisionShape2D" parent="Pivot/Hitboxes/Hitbox2"]

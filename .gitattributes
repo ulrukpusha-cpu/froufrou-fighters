@@ -1,0 +1,9 @@
+# Normalisation des fins de ligne (Windows / macOS / Linux)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.ttf binary
+*.otf binary

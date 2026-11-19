@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_xo33i"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_ej4o5"]
+
+[sub_resource type="Resource" id="Resource_c823a"]
+script = ExtResource("1_xo33i")
+rect = Rect2(30, -350, 170, 300)
+
+[resource]
+script = ExtResource("2_ej4o5")
+id = &"special_strike"
+display_name = "Riposte Royale"
+category = 1
+animation = &"counter_strike"
+startup_frames = 3
+active_frames = 4
+recovery_frames = 16
+damage = 120
+hitstun_frames = 24
+blockstun_frames = 14
+hit_stop_frames = 12
+knockdown = true
+launch_velocity = Vector2(520, -820)
+gauge_gain_on_hit = 15
+gauge_gain_on_block = 0
+hitboxes = Array[ExtResource("1_xo33i")]([SubResource("Resource_c823a")])

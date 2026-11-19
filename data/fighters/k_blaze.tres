@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="FighterData" format=3]
+
+[ext_resource type="Resource" path="res://data/moves/k_blaze/air_heavy.tres" id="1_222sy"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/air_light.tres" id="2_f7jxr"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/crouch_heavy.tres" id="3_mli0f"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/crouch_light.tres" id="4_cu60u"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/heavy.tres" id="5_fby46"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/light.tres" id="6_hdrqk"]
+[ext_resource type="Script" path="res://scripts/fighters/fighter_data.gd" id="7_6n0li"]
+[ext_resource type="SpriteFrames" path="res://assets/fighters/placeholder/placeholder_frames.tres" id="8_ehbdn"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/special.tres" id="8_mli0f"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/throw.tres" id="9_07qsg"]
+[ext_resource type="Resource" path="res://data/moves/k_blaze/ultimate.tres" id="11_cu60u"]
+
+[resource]
+script = ExtResource("7_6n0li")
+id = &"k_blaze"
+display_name = "K.BLAZE"
+origin = "Côte d'Ivoire"
+fighting_style = "Danse urbaine & arts martiaux"
+specialty_name = "Magnan Rush"
+description = "Combattant abidjanais rapide, agile et acrobatique. Il enchaîne les coups comme une colonne de magnans."
+sprite_frames = ExtResource("8_ehbdn")
+sprite_scale = 1.1
+outfit_color = Color(0.9411765, 0.4862745, 0.10980392, 1)
+skin_color = Color(0.41960785, 0.25882354, 0.14901961, 1)
+accent_color = Color(0.12156863, 0.65882355, 0.3882353, 1)
+walk_speed = 390.0
+back_walk_speed = 300.0
+jump_velocity = 1600.0
+jump_forward_speed = 420.0
+gravity = 4300.0
+dodge_speed = 780.0
+dodge_frames = 16
+dodge_invulnerable_frames = 11
+body_size = Vector2(100, 310)
+crouching_hurtbox = Rect2(-65, -260, 130, 260)
+light_attack = ExtResource("6_hdrqk")
+heavy_attack = ExtResource("5_fby46")
+crouch_light_attack = ExtResource("4_cu60u")
+crouch_heavy_attack = ExtResource("3_mli0f")
+air_light_attack = ExtResource("2_f7jxr")
+air_heavy_attack = ExtResource("1_222sy")
+throw_move = ExtResource("9_07qsg")
+special_move = ExtResource("8_mli0f")
+ultimate_move = ExtResource("11_cu60u")

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_3t1ih"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_6n638"]
+
+[sub_resource type="Resource" id="Resource_fjmsn"]
+script = ExtResource("1_3t1ih")
+rect = Rect2(30, -370, 200, 370)
+
+[resource]
+script = ExtResource("2_6n638")
+id = &"ultimate"
+display_name = "Charge des Agojie"
+category = 2
+animation = &"ultimate"
+startup_frames = 12
+active_frames = 8
+recovery_frames = 26
+damage = 310
+chip_damage = 30
+hitstun_frames = 30
+blockstun_frames = 22
+hit_stop_frames = 16
+pushback = 120.0
+knockdown = true
+launch_velocity = Vector2(650, -1000)
+gauge_gain_on_hit = 0
+gauge_gain_on_block = 0
+gauge_cost = 300
+self_velocity = Vector2(900, 0)
+invulnerable_frames = 12
+hitboxes = Array[ExtResource("1_3t1ih")]([SubResource("Resource_fjmsn")])

@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/results.gd" id="1_results"]
+[ext_resource type="Script" path="res://scripts/ui/safe_area_container.gd" id="2_safe"]
+
+[node name="Results" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_results")
+
+[node name="Background" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SafeArea" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_safe")
+base_margin = 48.0
+
+[node name="Content" type="VBoxContainer" parent="SafeArea"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="OutcomeLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 160
+text = "VICTOIRE"
+horizontal_alignment = 1
+
+[node name="DetailLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+
+[node name="RecordLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="SafeArea/Content"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="RematchButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 110)
+layout_mode = 2
+text = "REVANCHE"
+
+[node name="SelectButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 110)
+layout_mode = 2
+text = "COMBATTANTS"
+
+[node name="MenuButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 110)
+layout_mode = 2
+text = "MENU"

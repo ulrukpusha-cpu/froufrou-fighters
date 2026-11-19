@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AIProfile" format=3]
+
+[ext_resource type="Script" path="res://scripts/ai/ai_profile.gd" id="1_profile"]
+
+[resource]
+script = ExtResource("1_profile")
+difficulty = 1
+display_name = "NORMAL"
+reaction_frames = 12
+decision_interval_frames = 12
+aggression = 0.45
+combo_chance = 0.5
+special_chance = 0.12
+ultimate_chance = 0.5
+throw_chance = 0.2
+jump_chance = 0.08
+block_chance = 0.45
+guard_accuracy = 0.7
+punish_chance = 0.35
+counter_chance = 0.3
+dodge_chance = 0.1
+manages_spacing = true

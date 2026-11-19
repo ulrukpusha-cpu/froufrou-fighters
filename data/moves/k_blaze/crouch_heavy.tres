@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_mtjk7"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_844st"]
+
+[sub_resource type="Resource" id="Resource_gxog7"]
+script = ExtResource("1_mtjk7")
+rect = Rect2(60, -50, 115, 50)
+
+[resource]
+script = ExtResource("2_844st")
+id = &"crouch_heavy"
+display_name = "Balayage Coupé-Décalé"
+animation = &"low_kick"
+crouching = true
+startup_frames = 7
+active_frames = 4
+recovery_frames = 20
+damage = 80
+hitstun_frames = 0
+blockstun_frames = 12
+hit_stop_frames = 8
+pushback = 70.0
+hit_level = 1
+knockdown = true
+launch_velocity = Vector2(250, -450)
+gauge_gain_on_hit = 10
+gauge_gain_on_block = 5
+hitboxes = Array[ExtResource("1_mtjk7")]([SubResource("Resource_gxog7")])

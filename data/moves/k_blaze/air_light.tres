@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_b2xud"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_82n1e"]
+
+[sub_resource type="Resource" id="Resource_3wom2"]
+script = ExtResource("1_b2xud")
+rect = Rect2(55, -330, 110, 60)
+
+[resource]
+script = ExtResource("2_82n1e")
+id = &"air_light"
+display_name = "Coude Aérien"
+animation = &"air_punch"
+active_frames = 6
+recovery_frames = 6
+damage = 45
+hitstun_frames = 16
+pushback = 40.0
+hit_level = 2
+gauge_gain_on_hit = 6
+gauge_gain_on_block = 3
+hitboxes = Array[ExtResource("1_b2xud")]([SubResource("Resource_3wom2")])

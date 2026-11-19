@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_0ybns"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_j23gt"]
+
+[sub_resource type="Resource" id="Resource_sy27m"]
+script = ExtResource("1_0ybns")
+rect = Rect2(62, -52, 125, 52)
+
+[resource]
+script = ExtResource("2_j23gt")
+id = &"crouch_heavy"
+display_name = "Fauchage des Agojie"
+animation = &"low_kick"
+crouching = true
+startup_frames = 8
+active_frames = 4
+recovery_frames = 22
+damage = 95
+chip_damage = 8
+hitstun_frames = 0
+blockstun_frames = 13
+hit_stop_frames = 9
+pushback = 80.0
+hit_level = 1
+knockdown = true
+launch_velocity = Vector2(280, -500)
+gauge_gain_on_hit = 12
+gauge_gain_on_block = 6
+hitboxes = Array[ExtResource("1_0ybns")]([SubResource("Resource_sy27m")])

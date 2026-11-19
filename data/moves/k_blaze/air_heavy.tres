@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_cv6qv"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_exl30"]
+
+[sub_resource type="Resource" id="Resource_5qhib"]
+script = ExtResource("1_cv6qv")
+rect = Rect2(60, -200, 110, 80)
+
+[resource]
+script = ExtResource("2_exl30")
+id = &"air_heavy"
+display_name = "Pied Plongeant"
+animation = &"air_kick"
+startup_frames = 6
+active_frames = 8
+recovery_frames = 6
+damage = 75
+hitstun_frames = 18
+blockstun_frames = 12
+hit_stop_frames = 8
+hit_level = 2
+gauge_gain_on_hit = 10
+gauge_gain_on_block = 5
+hitboxes = Array[ExtResource("1_cv6qv")]([SubResource("Resource_5qhib")])

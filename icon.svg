@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <clipPath id="badge">
+      <rect x="8" y="8" width="240" height="240" rx="44"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#badge)">
+    <rect x="0" y="0" width="256" height="256" fill="#3a1257"/>
+    <polygon points="0,196 256,64 256,124 0,256" fill="#cc5500"/>
+    <polygon points="0,232 256,100 256,112 0,244" fill="#18161a" opacity="0.55"/>
+    <circle cx="206" cy="52" r="7" fill="#f5eedc"/>
+    <circle cx="186" cy="34" r="4" fill="#f5eedc"/>
+    <circle cx="224" cy="78" r="3" fill="#f5eedc"/>
+  </g>
+  <g transform="translate(128 128) skewX(-12) translate(-128 -128)"
+     fill="#e2a829" stroke="#18161a" stroke-width="7" stroke-linejoin="round">
+    <path d="M50 54 H126 V82 H82 V112 H118 V140 H82 V204 H50 Z"/>
+    <path d="M138 54 H214 V82 H170 V112 H206 V140 H170 V204 H138 Z"/>
+  </g>
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="none" stroke="#e2a829" stroke-width="6"/>
+</svg>

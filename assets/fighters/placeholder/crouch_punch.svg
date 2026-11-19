@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="432" viewBox="0 0 320 432">
+<polyline points="180.0,250.0 166.0,272.0 206.0,258.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="34.0"/>
+<polyline points="180.0,250.0 166.0,272.0 206.0,258.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00a600" stroke-width="24.0"/>
+<circle cx="206.0" cy="258.0" r="13.0" fill="#0000a6" stroke="#000000" stroke-width="5.0"/>
+<polyline points="155.0,330.0 126.0,374.0 104.0,410.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="44.0"/>
+<polyline points="155.0,330.0 126.0,374.0 104.0,410.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#a60000" stroke-width="34.0"/>
+<circle cx="104.0" cy="410.0" r="14.0" fill="#0000a6" stroke="#000000" stroke-width="5.0"/>
+<polyline points="180.0,236.0 155.0,330.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="66.0"/>
+<polyline points="180.0,236.0 155.0,330.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff0000" stroke-width="56.0"/>
+<line x1="129.9" y1="323.3" x2="180.1" y2="336.7" stroke="#0000ff" stroke-width="12.0" stroke-linecap="round"/>
+<polyline points="155.0,330.0 216.0,346.0 222.0,410.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="44.0"/>
+<polyline points="155.0,330.0 216.0,346.0 222.0,410.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff0000" stroke-width="34.0"/>
+<circle cx="222.0" cy="410.0" r="14.0" fill="#0000ff" stroke="#000000" stroke-width="5.0"/>
+<polyline points="180.0,250.0 232.0,246.0 290.0,240.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="34.0"/>
+<polyline points="180.0,250.0 232.0,246.0 290.0,240.0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00ff00" stroke-width="24.0"/>
+<circle cx="290.0" cy="240.0" r="13.0" fill="#0000ff" stroke="#000000" stroke-width="5.0"/>
+<circle cx="194.0" cy="206.0" r="28.0" fill="#00ff00" stroke="#000000" stroke-width="5.0"/>
+<line x1="172.9" y1="187.3" x2="221.9" y2="210.2" stroke="#0000ff" stroke-width="9.0" stroke-linecap="round"/>
+</svg>

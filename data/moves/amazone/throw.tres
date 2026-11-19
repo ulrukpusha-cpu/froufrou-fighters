@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_ayj7t"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_iqube"]
+
+[sub_resource type="Resource" id="Resource_dromi"]
+script = ExtResource("1_ayj7t")
+rect = Rect2(30, -315, 120, 210)
+
+[resource]
+script = ExtResource("2_iqube")
+id = &"throw"
+display_name = "Prise du Danxomè"
+animation = &"throw"
+active_frames = 2
+recovery_frames = 22
+damage = 130
+hitstun_frames = 0
+blockstun_frames = 0
+hit_stop_frames = 12
+pushback = 0.0
+knockdown = true
+launch_velocity = Vector2(600, -650)
+gauge_gain_on_hit = 16
+gauge_gain_on_block = 0
+is_throw = true
+hitboxes = Array[ExtResource("1_ayj7t")]([SubResource("Resource_dromi")])

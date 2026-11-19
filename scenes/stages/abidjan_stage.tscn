@@ -1,0 +1,258 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/stage.gd" id="1_stage"]
+[ext_resource type="Script" path="res://scripts/stages/night_sky.gd" id="2_sky"]
+[ext_resource type="Script" path="res://scripts/stages/city_layer.gd" id="3_city"]
+[ext_resource type="Script" path="res://scripts/stages/traffic_lane.gd" id="4_traffic"]
+[ext_resource type="Script" path="res://scripts/stages/street_lamp.gd" id="5_lamp"]
+[ext_resource type="Script" path="res://scripts/stages/shop_row.gd" id="6_shops"]
+[ext_resource type="Script" path="res://scripts/stages/neon_sign.gd" id="7_neon"]
+[ext_resource type="Script" path="res://scripts/stages/power_lines.gd" id="8_power"]
+[ext_resource type="Script" path="res://scripts/stages/street_ground.gd" id="9_ground"]
+[ext_resource type="Script" path="res://scripts/stages/crowd.gd" id="10_crowd"]
+
+[node name="AbidjanStage" type="Node2D"]
+script = ExtResource("1_stage")
+display_name = "Abidjan — Le Plateau Électrique"
+
+[node name="Sky" type="Parallax2D" parent="."]
+z_index = -60
+scroll_scale = Vector2(0.05, 1)
+
+[node name="NightSky" type="Node2D" parent="Sky"]
+script = ExtResource("2_sky")
+
+[node name="Background" type="Parallax2D" parent="."]
+z_index = -50
+scroll_scale = Vector2(0.15, 1)
+
+[node name="FarSkyline" type="Node2D" parent="Background"]
+script = ExtResource("3_city")
+span = Vector2(-1600, 1600)
+base_y = -30.0
+width_range = Vector2(80, 170)
+height_range = Vector2(260, 620)
+gap_range = Vector2(0, 30)
+building_color = Color(0.17, 0.08, 0.27, 1)
+window_color = Color(0.91, 0.71, 0.35, 0.35)
+window_density = 0.28
+window_size = Vector2(6, 9)
+window_spacing = Vector2(16, 22)
+beacon_min_height = 600.0
+rng_seed = 11
+
+[node name="Pyramide" type="Polygon2D" parent="Background"]
+position = Vector2(60, 0)
+color = Color(0.2, 0.094, 0.31, 1)
+polygon = PackedVector2Array(0, -30, 300, -30, 300, -160, 270, -160, 270, -280, 240, -280, 240, -390, 205, -390, 205, -500, 95, -500, 95, -390, 60, -390, 60, -280, 30, -280, 30, -160, 0, -160)
+
+[node name="Haze" type="Polygon2D" parent="Background"]
+polygon = PackedVector2Array(-1700, -720, 1700, -720, 1700, -20, -1700, -20)
+vertex_colors = PackedColorArray(0.8, 0.333, 0, 0, 0.8, 0.333, 0, 0, 0.8, 0.333, 0, 0.32, 0.8, 0.333, 0, 0.32)
+
+[node name="Midground" type="Parallax2D" parent="."]
+z_index = -40
+scroll_scale = Vector2(0.4, 1)
+
+[node name="PlateauTowers" type="Node2D" parent="Midground"]
+script = ExtResource("3_city")
+span = Vector2(-1950, 1950)
+base_y = -20.0
+width_range = Vector2(150, 280)
+height_range = Vector2(380, 980)
+gap_range = Vector2(10, 60)
+building_color = Color(0.1, 0.04, 0.165, 1)
+window_color = Color(1, 0.84, 0.48, 0.75)
+window_density = 0.42
+beacon_min_height = 820.0
+rng_seed = 23
+
+[node name="Boulevard" type="Parallax2D" parent="."]
+z_index = -30
+scroll_scale = Vector2(0.7, 1)
+
+[node name="PillarA" type="Polygon2D" parent="Boulevard"]
+color = Color(0.13, 0.06, 0.19, 1)
+polygon = PackedVector2Array(-1835, -558, -1765, -558, -1765, 0, -1835, 0)
+
+[node name="PillarB" type="Polygon2D" parent="Boulevard"]
+color = Color(0.13, 0.06, 0.19, 1)
+polygon = PackedVector2Array(-1035, -558, -965, -558, -965, 0, -1035, 0)
+
+[node name="PillarC" type="Polygon2D" parent="Boulevard"]
+color = Color(0.13, 0.06, 0.19, 1)
+polygon = PackedVector2Array(-235, -558, -165, -558, -165, 0, -235, 0)
+
+[node name="PillarD" type="Polygon2D" parent="Boulevard"]
+color = Color(0.13, 0.06, 0.19, 1)
+polygon = PackedVector2Array(565, -558, 635, -558, 635, 0, 565, 0)
+
+[node name="PillarE" type="Polygon2D" parent="Boulevard"]
+color = Color(0.13, 0.06, 0.19, 1)
+polygon = PackedVector2Array(1365, -558, 1435, -558, 1435, 0, 1365, 0)
+
+[node name="TrafficWest" type="Node2D" parent="Boulevard"]
+position = Vector2(0, -604)
+script = ExtResource("4_traffic")
+direction = -1
+car_count = 3
+speed_range = Vector2(220, 340)
+car_scale = 0.55
+rng_seed = 8
+
+[node name="Deck" type="Polygon2D" parent="Boulevard"]
+color = Color(0.14, 0.063, 0.2, 1)
+polygon = PackedVector2Array(-2400, -600, 2400, -600, 2400, -558, -2400, -558)
+
+[node name="DeckLight" type="Polygon2D" parent="Boulevard"]
+color = Color(0.8, 0.333, 0, 0.55)
+polygon = PackedVector2Array(-2400, -558, 2400, -558, 2400, -550, -2400, -550)
+
+[node name="TrafficEast" type="Node2D" parent="Boulevard"]
+position = Vector2(0, -600)
+script = ExtResource("4_traffic")
+
+[node name="Railing" type="Polygon2D" parent="Boulevard"]
+color = Color(0.07, 0.03, 0.1, 1)
+polygon = PackedVector2Array(-2400, -632, 2400, -632, 2400, -626, -2400, -626)
+
+[node name="LampA" type="Node2D" parent="Boulevard"]
+position = Vector2(-1500, -600)
+script = ExtResource("5_lamp")
+height = 170.0
+arm_length = 55.0
+glow_radius = 70.0
+cone_width = 0.0
+
+[node name="LampB" type="Node2D" parent="Boulevard"]
+position = Vector2(-450, -600)
+script = ExtResource("5_lamp")
+height = 170.0
+arm_length = 55.0
+glow_radius = 70.0
+cone_width = 0.0
+
+[node name="LampC" type="Node2D" parent="Boulevard"]
+position = Vector2(600, -600)
+script = ExtResource("5_lamp")
+height = 170.0
+arm_length = 55.0
+glow_radius = 70.0
+cone_width = 0.0
+
+[node name="LampD" type="Node2D" parent="Boulevard"]
+position = Vector2(1650, -600)
+script = ExtResource("5_lamp")
+height = 170.0
+arm_length = 55.0
+glow_radius = 70.0
+cone_width = 0.0
+
+[node name="Street" type="Parallax2D" parent="."]
+z_index = -20
+scroll_scale = Vector2(0.88, 1)
+
+[node name="Shops" type="Node2D" parent="Street"]
+script = ExtResource("6_shops")
+
+[node name="SignPharmacie" type="Node2D" parent="Street"]
+position = Vector2(-1850, -322)
+script = ExtResource("7_neon")
+text = "PHARMACIE"
+neon_color = Color(0.22, 0.85, 0.54, 1)
+font_size = 44
+
+[node name="SignMaquis" type="Node2D" parent="Street"]
+position = Vector2(-1426, -322)
+script = ExtResource("7_neon")
+font_size = 48
+
+[node name="SignAlloco" type="Node2D" parent="Street"]
+position = Vector2(-1002, -322)
+script = ExtResource("7_neon")
+text = "ALLOCO"
+neon_color = Color(1, 0.79, 0.24, 1)
+font_size = 48
+
+[node name="SignCoiffure" type="Node2D" parent="Street"]
+position = Vector2(-578, -322)
+script = ExtResource("7_neon")
+text = "COIFFURE"
+neon_color = Color(0.85, 0.42, 1, 1)
+font_size = 46
+
+[node name="SignGarba" type="Node2D" parent="Street"]
+position = Vector2(-154, -322)
+script = ExtResource("7_neon")
+text = "GARBA"
+neon_color = Color(0.18, 0.88, 0.48, 1)
+font_size = 48
+
+[node name="SignTransfert" type="Node2D" parent="Street"]
+position = Vector2(270, -322)
+script = ExtResource("7_neon")
+text = "TRANSFERT"
+neon_color = Color(0.24, 0.84, 1, 1)
+font_size = 44
+
+[node name="SignAttieke" type="Node2D" parent="Street"]
+position = Vector2(694, -322)
+script = ExtResource("7_neon")
+text = "ATTIÉKÉ"
+neon_color = Color(1, 0.83, 0.42, 1)
+font_size = 48
+
+[node name="SignBoutique" type="Node2D" parent="Street"]
+position = Vector2(1118, -322)
+script = ExtResource("7_neon")
+text = "BOUTIQUE"
+neon_color = Color(1, 0.35, 0.48, 1)
+font_size = 46
+
+[node name="SignCafe" type="Node2D" parent="Street"]
+position = Vector2(1542, -322)
+script = ExtResource("7_neon")
+text = "CAFÉ"
+neon_color = Color(1, 0.7, 0.28, 1)
+font_size = 48
+
+[node name="SignGrillades" type="Node2D" parent="Street"]
+position = Vector2(1966, -322)
+script = ExtResource("7_neon")
+text = "GRILLADES"
+font_size = 44
+
+[node name="PowerLines" type="Node2D" parent="Street"]
+script = ExtResource("8_power")
+ground_y = -10.0
+top_y = -580.0
+
+[node name="CombatPlane" type="Node2D" parent="."]
+z_index = -10
+
+[node name="StreetGround" type="Node2D" parent="CombatPlane"]
+script = ExtResource("9_ground")
+
+[node name="Foreground" type="Parallax2D" parent="."]
+z_index = 20
+scroll_scale = Vector2(1.3, 1)
+
+[node name="Crowd" type="Node2D" parent="Foreground"]
+script = ExtResource("10_crowd")
+
+[node name="LampLeft" type="Node2D" parent="Foreground"]
+position = Vector2(-1750, 460)
+script = ExtResource("5_lamp")
+height = 1300.0
+arm_length = 120.0
+glow_radius = 150.0
+cone_width = 0.0
+
+[node name="LampRight" type="Node2D" parent="Foreground"]
+position = Vector2(1750, 460)
+script = ExtResource("5_lamp")
+height = 1300.0
+arm_length = 120.0
+facing = -1
+glow_radius = 150.0
+cone_width = 0.0

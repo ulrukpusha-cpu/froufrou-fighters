@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MoveData" format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="1_rmp56"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="2_8ve46"]
+
+[sub_resource type="Resource" id="Resource_gywt4"]
+script = ExtResource("1_rmp56")
+rect = Rect2(62, -334, 115, 62)
+
+[resource]
+script = ExtResource("2_8ve46")
+id = &"light"
+display_name = "Frappe Royale"
+startup_frames = 5
+recovery_frames = 8
+damage = 42
+hitstun_frames = 15
+pushback = 50.0
+gauge_gain_on_hit = 7
+gauge_gain_on_block = 3
+cancel_condition = 2
+cancel_into = Array[StringName]([&"light", &"heavy", &"crouch_light", &"crouch_heavy", &"ultimate"])
+hitboxes = Array[ExtResource("1_rmp56")]([SubResource("Resource_gywt4")])

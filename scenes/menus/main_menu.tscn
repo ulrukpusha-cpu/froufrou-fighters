@@ -1,0 +1,102 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" path="res://scripts/ui/safe_area_container.gd" id="2_safe"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="3_icon"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SafeArea" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_safe")
+base_margin = 48.0
+
+[node name="Content" type="VBoxContainer" parent="SafeArea"]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="SafeArea/Content"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_icon")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = "FROUFROU FIGHTERS"
+horizontal_alignment = 1
+
+[node name="TaglineLabel" type="Label" parent="SafeArea/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "AFRO URBAN FIGHTING"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="SafeArea/Content"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+
+[node name="FightButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 110)
+layout_mode = 2
+text = "COMBAT"
+
+[node name="OptionsButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 110)
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="SafeArea/Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 110)
+layout_mode = 2
+text = "QUITTER"
+
+[node name="VersionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -64.0
+offset_right = -32.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "v0.0.0"
+horizontal_alignment = 2

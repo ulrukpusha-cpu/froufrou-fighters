@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/fight_scene.gd" id="1_scene"]
+[ext_resource type="Script" path="res://scripts/combat/fight_camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scripts/combat/fight_manager.gd" id="3_manager"]
+[ext_resource type="PackedScene" path="res://scenes/combat/fight_hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" path="res://scenes/combat/touch_controls.tscn" id="5_touch"]
+[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="6_pause"]
+
+[node name="FightScene" type="Node2D"]
+script = ExtResource("1_scene")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="FightCamera" type="Camera2D" parent="."]
+script = ExtResource("2_camera")
+
+[node name="FightManager" type="Node" parent="."]
+script = ExtResource("3_manager")
+
+[node name="FightHud" parent="." instance=ExtResource("4_hud")]
+
+[node name="TouchControls" parent="." instance=ExtResource("5_touch")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_pause")]

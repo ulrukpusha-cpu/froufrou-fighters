@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StageData" format=3]
+
+[ext_resource type="Script" path="res://scripts/stages/stage_data.gd" id="1_stage"]
+
+[resource]
+script = ExtResource("1_stage")
+id = &"abidjan_plateau"
+display_name = "Abidjan — Le Plateau Électrique"
+city = "Abidjan"
+district = "Le Plateau"
+description = "Le quartier des affaires à la tombée de la nuit : tours illuminées, échangeur où filent les taxis orange, rue de maquis et de commerces aux enseignes néon, et un public qui ne rate aucun coup."
+scene_path = "res://scenes/stages/abidjan_stage.tscn"

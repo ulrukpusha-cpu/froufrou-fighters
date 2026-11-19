@@ -1,0 +1,175 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/fight_hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/ui/safe_area_container.gd" id="2_safe"]
+
+[node name="FightHud" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="SafeArea" type="MarginContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_safe")
+
+[node name="TopBar" type="HBoxContainer" parent="SafeArea"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="P1PortraitFrame" type="PanelContainer" parent="SafeArea/TopBar"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="P1Portrait" type="TextureRect" parent="SafeArea/TopBar/P1PortraitFrame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="P1Panel" type="VBoxContainer" parent="SafeArea/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="P1Name" type="Label" parent="SafeArea/TopBar/P1Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "JOUEUR 1"
+
+[node name="P1Health" type="ProgressBar" parent="SafeArea/TopBar/P1Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+
+[node name="P1GaugeBar" type="ProgressBar" parent="SafeArea/TopBar/P1Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+mouse_filter = 2
+show_percentage = false
+
+[node name="P1Info" type="HBoxContainer" parent="SafeArea/TopBar/P1Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="P1GaugeLabel" type="Label" parent="SafeArea/TopBar/P1Panel/P1Info"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "SUPER 0"
+
+[node name="P1Rounds" type="Label" parent="SafeArea/TopBar/P1Panel/P1Info"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○○"
+
+[node name="P1Combo" type="Label" parent="SafeArea/TopBar/P1Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+
+[node name="TimerLabel" type="Label" parent="SafeArea/TopBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 96
+text = "99"
+horizontal_alignment = 1
+
+[node name="P2Panel" type="VBoxContainer" parent="SafeArea/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="P2Name" type="Label" parent="SafeArea/TopBar/P2Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "JOUEUR 2"
+horizontal_alignment = 2
+
+[node name="P2Health" type="ProgressBar" parent="SafeArea/TopBar/P2Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+mouse_filter = 2
+value = 100.0
+fill_mode = 1
+show_percentage = false
+
+[node name="P2GaugeBar" type="ProgressBar" parent="SafeArea/TopBar/P2Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+mouse_filter = 2
+fill_mode = 1
+show_percentage = false
+
+[node name="P2Info" type="HBoxContainer" parent="SafeArea/TopBar/P2Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="P2Rounds" type="Label" parent="SafeArea/TopBar/P2Panel/P2Info"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "○○"
+
+[node name="P2GaugeLabel" type="Label" parent="SafeArea/TopBar/P2Panel/P2Info"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "SUPER 0"
+horizontal_alignment = 2
+
+[node name="P2Combo" type="Label" parent="SafeArea/TopBar/P2Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 2
+
+[node name="P2PortraitFrame" type="PanelContainer" parent="SafeArea/TopBar"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="P2Portrait" type="TextureRect" parent="SafeArea/TopBar/P2PortraitFrame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Announcer" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,219 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/idle_0.svg" id="idle_0"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/idle_1.svg" id="idle_1"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/walk_0.svg" id="walk_0"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/walk_1.svg" id="walk_1"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/jump.svg" id="jump"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/crouch.svg" id="crouch"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/punch.svg" id="punch"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/kick.svg" id="kick"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/crouch_punch.svg" id="crouch_punch"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/low_kick.svg" id="low_kick"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/air_punch.svg" id="air_punch"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/air_kick.svg" id="air_kick"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/block.svg" id="block"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/crouch_block.svg" id="crouch_block"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/hit.svg" id="hit"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/knockdown.svg" id="knockdown"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/dodge.svg" id="dodge"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/throw.svg" id="throw"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/special.svg" id="special"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/ultimate.svg" id="ultimate"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/victory.svg" id="victory"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/counter.svg" id="counter"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/counter_strike.svg" id="counter_strike"]
+[ext_resource type="Texture2D" path="res://assets/fighters/placeholder/defeat.svg" id="defeat"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("idle_0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("idle_1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("walk_0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("walk_1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("jump")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("crouch")
+}],
+"loop": false,
+"name": &"crouch",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("punch")
+}],
+"loop": false,
+"name": &"punch",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("kick")
+}],
+"loop": false,
+"name": &"kick",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("crouch_punch")
+}],
+"loop": false,
+"name": &"crouch_punch",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("low_kick")
+}],
+"loop": false,
+"name": &"low_kick",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("air_punch")
+}],
+"loop": false,
+"name": &"air_punch",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("air_kick")
+}],
+"loop": false,
+"name": &"air_kick",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("block")
+}],
+"loop": false,
+"name": &"block",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("crouch_block")
+}],
+"loop": false,
+"name": &"crouch_block",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("hit")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("knockdown")
+}],
+"loop": false,
+"name": &"knockdown",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("crouch")
+}],
+"loop": false,
+"name": &"getup",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("dodge")
+}],
+"loop": false,
+"name": &"dodge",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("throw")
+}],
+"loop": false,
+"name": &"throw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("special")
+}],
+"loop": false,
+"name": &"special",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("ultimate")
+}],
+"loop": false,
+"name": &"ultimate",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("counter")
+}],
+"loop": false,
+"name": &"counter",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("counter_strike")
+}],
+"loop": false,
+"name": &"counter_strike",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("victory")
+}],
+"loop": false,
+"name": &"victory",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("defeat")
+}],
+"loop": false,
+"name": &"defeat",
+"speed": 1.0
+}]

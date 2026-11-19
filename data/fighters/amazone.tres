@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="FighterData" format=3]
+
+[ext_resource type="Resource" path="res://data/moves/amazone/air_heavy.tres" id="1_eyjjp"]
+[ext_resource type="Resource" path="res://data/moves/amazone/air_light.tres" id="2_uqi86"]
+[ext_resource type="Resource" path="res://data/moves/amazone/crouch_heavy.tres" id="3_0xvyl"]
+[ext_resource type="Resource" path="res://data/moves/amazone/crouch_light.tres" id="4_u8c50"]
+[ext_resource type="Resource" path="res://data/moves/amazone/heavy.tres" id="5_4aid8"]
+[ext_resource type="Resource" path="res://data/moves/amazone/light.tres" id="6_h7r3e"]
+[ext_resource type="Script" path="res://scripts/fighters/fighter_data.gd" id="7_1p71g"]
+[ext_resource type="Resource" path="res://data/moves/amazone/special.tres" id="8_0xvyl"]
+[ext_resource type="SpriteFrames" path="res://assets/fighters/placeholder/placeholder_frames.tres" id="8_l6f4s"]
+[ext_resource type="Resource" path="res://data/moves/amazone/throw.tres" id="9_xo6fs"]
+[ext_resource type="Resource" path="res://data/moves/amazone/ultimate.tres" id="11_u8c50"]
+
+[resource]
+script = ExtResource("7_1p71g")
+id = &"amazone"
+display_name = "AMAZONE"
+origin = "Bénin"
+fighting_style = "Arts martiaux & projections"
+specialty_name = "Royal Counter"
+description = "Héritière des guerrières Agojie du Dahomey : technique, puissante, redoutable au corps à corps."
+sprite_frames = ExtResource("8_l6f4s")
+sprite_scale = 1.15
+outfit_color = Color(0.65882355, 0.14901961, 0.16470589, 1)
+skin_color = Color(0.3529412, 0.20392157, 0.1254902, 1)
+accent_color = Color(0.9490196, 0.7607843, 0.1882353, 1)
+walk_speed = 330.0
+back_walk_speed = 260.0
+jump_velocity = 1480.0
+jump_forward_speed = 360.0
+dodge_speed = 640.0
+dodge_frames = 20
+dodge_invulnerable_frames = 13
+body_size = Vector2(105, 325)
+standing_hurtbox = Rect2(-62, -366, 124, 366)
+crouching_hurtbox = Rect2(-68, -272, 136, 272)
+light_attack = ExtResource("6_h7r3e")
+heavy_attack = ExtResource("5_4aid8")
+crouch_light_attack = ExtResource("4_u8c50")
+crouch_heavy_attack = ExtResource("3_0xvyl")
+air_light_attack = ExtResource("2_uqi86")
+air_heavy_attack = ExtResource("1_eyjjp")
+throw_move = ExtResource("9_xo6fs")
+special_move = ExtResource("8_0xvyl")
+ultimate_move = ExtResource("11_u8c50")
